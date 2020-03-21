@@ -1,0 +1,81 @@
+
+ <div class="card card-center cstmcard">
+  <div class="card redbox py-3 px-5 "><h1>Registration Form</h1></div>
+     
+  <form style="padding:5% 10% 0 10%;font-size: x-large; " #formContent='ngForm'>
+   
+    <div class="form-group">
+      <label for="fullName"><b>Full Name</b></label>
+      <input type="text" class="form-control" id="fullName" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="studentNo"><b>Student No.</b></label>
+        <input type="number" class="form-control mr-3" id="studentNo" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="rollNo"><b>Roll No.</b></label>
+        <input type="number" class="form-control" id="rollNo" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email"><b>E-mail</b></label>
+      <input type="email" class="form-control" id="email" required email>
+    </div>
+    
+    
+    <div class="form-row">
+      <div class="form-group col-md">
+        <label for="course"><b>Course</b></label>
+        <select id="course" class="form-control" >
+          <option selected>B.Tech</option>
+          <option>MBA</option>
+          <option>MCA</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md">
+        <label for="branch"><b>Branch</b></label>
+        <select id="branch" class="form-control">
+          <option selected>IT</option>
+          <option>CSE</option>
+          <option>ECE</option>
+          <option>Civil</option>
+          <option>ME</option>
+          <option>EI</option>
+          <option>EN</option>
+        </select>
+      </div>
+      
+      <div class="form-group col-md">
+        <label for="sem"><b>Semester</b></label>
+        <select id="sem" class="form-control">
+          <option selected>VI</option>
+          <option>I</option>
+          <option>II</option>
+          <option>III</option>
+          <option>V</option>
+          <option>VI</option>
+          <option>VII</option>
+          <option>VIII</option>
+        </select>
+      </div>
+
+    </div>
+   
+
+    <div class="form-group">
+      <label for="phoneNo"><b>Phone Number</b></label>
+      <input type="number" class="form-control" id="phoneNo" required>
+    </div> 
+    <div class="btn-center">
+    <a routerLink="/submitted">
+      <button type="button" class="btn btn-light" 
+         [disabled]="!formContent.valid" >  
+          <h4 class="px-4 py-0" >Submit</h4>
+      </button>
+    </a>
+  </div>         
+  </form> 
+ 
+</div>
